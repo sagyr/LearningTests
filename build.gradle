@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+    testImplementation "org.testcontainers:neo4j:1.15.3"
+    testImplementation group: 'org.neo4j.driver', name: 'neo4j-java-driver', version: '4.3.3'
+    testImplementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.14.1'
+
+}
+
+test {
+    //useJUnitPlatform()
+}
